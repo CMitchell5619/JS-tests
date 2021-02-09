@@ -4,6 +4,10 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+    firstElement = arr.shift();
+    arr.push(firstElement)
+    return arr;
+
 }
 
 
@@ -16,6 +20,9 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    let bigBoi = Math.max(...arr)
+    return bigBoi
+
 }
 
 
@@ -28,6 +35,13 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+    let out = []
+for (let i = 0; i < arr.length; i++) {
+    const num = (arr[i]);
+    out.push(num * arr.length)  
+    
+}
+    return out 
 }
 
 
@@ -111,4 +125,10 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+    for (let i = 0; i < theBand.members.length; i++) {
+        const musicperson = theBand.members[i];
+        if (name == musicperson.name) {
+            return(`${musicperson.name} is in the band and plays the ${musicperson.instrument}`)
+        }
+    }
 }
